@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infotec - Informática para internet ETEC DPM</title>
+    <link rel="shortcut icon" href="assets/img/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="loading"><img src="assets/img/logo.svg" class="fa-beat" alt="Logotipo de carregamento"></div>
+    <div class="radial" id="1" alt="Elemento radial 1"></div>
+    <div class="radial" alt="Elemento radial 2"></div>
+    <div class="radial" alt="Elemento radial 3"></div>
+    <h2 id="infotec"> INFOTEC</h2>
+    <div id="music">
+        <audio id="audioPlayer" src="assets/img/faces_S8p0crahq3A.mp3"></audio>
+        <button id="playButton" onclick="playPause()">
+            <i class="fas fa-play"></i>
+        </button>
+        <div id="progressBar">
+            <div id="progress"></div>
+        </div>
+    </div>
+    <div id="font">
+        <i class="fa-sharp fa-solid fa-arrow-up" id="btnAumentar" alt="Ícone de seta para cima"></i>
+        <i class="fa-sharp fa-solid fa-arrow-down" id="btnDiminuir" alt="Ícone de seta para baixo"></i>
+    </div>
+    <div class="body">
+        <header id="header">
+            <div id="logo">
+                <img src="assets/img/logo.svg" alt="Logotipo do Infotec"><h1> INFOTEC</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about" class="cc" alt="Link para a seção Sobre">Sobre</a></li>
+                    <!--li><a href="#projects" class="cc" alt="Link para a seção Projetos">Projetos</a></li-->
+                    <li><a href="#dev" class="cc" alt="Link para a seção Desenvolvedores">Desenvolvedores</a></li>
+                    <li><a href="#devD" class="cc" alt="Link para a seção Curso">Curso</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>INFOTEC</h1>
+            <h2>&lt; Excellent Code / &gt; </h2>
+            <img src="assets/img/walp.png" alt="Imagem de plano de fundo">
+            <h3 id="timestamp">😝 O evento começará em 😝</h3>
+        </main>
+        <div id="about">
+            <p>A infotec é uma parte emocionante do evento Fetec, onde exibimos nossas criações e inovações no campo da informática para internet. Nossa missão é explorar e apresentar as últimas tendências em tecnologia da informação, experiências de usuário e desenvolvimento web. Acreditamos na importância de compartilhar conhecimento e inspirar outros a se aventurarem no mundo da tecnologia.</p>
+        </div>
+        <div id="projects">
+            <h2>Projetos</h2>
+            <div id="slide">
+                <img src="assets/img/card.png" alt="Imagem do projeto 1">
+                <img src="assets/img/card.png" alt="Imagem do projeto 2">
+                <img src="assets/img/card.png" alt="Imagem do projeto 3">
+                <img src="assets/img/card.png" alt="Imagem do projeto 4">
+                <img src="assets/img/card.png" alt="Imagem do projeto 5">
+            </div>
+            <div class="navigation">
+                <div><i id="prevButton" class="fa-solid fa-caret-left"></i></div>
+                <div><i id="pauseButton" class="fa-sharp fa-solid fa-pause"></i></div>
+                <div><i id="nextButton" class="fa-solid fa-caret-right"></i></div>
+            </div>
+        </div>
+        <div id="dev">
+            <video controls>
+                <source src="assets/img/fetec-informatica-para-internet.mp4" type="video/mp4">
+                <track src="assets/captions/ipiEtec.vtt" kind="subtitles" srclang="pt" label="Português" default>
+                Desculpe, o seu navegador não suporta a reprodução de vídeos.
+            </video>
+            <div id="devD">
+                <h3>Informática para internet</h3>
+                <p>Este curso proporciona uma educação de alta qualidade, incluindo a conclusão do ensino médio. Além disso, oferece inúmeras oportunidades na carreira profissional. A área computacional é altamente promissora e possui uma alta demanda por profissionais qualificados. O curso abrange programação, desenvolvimento web, aplicativos e robótica, fornecendo conhecimentos essenciais para os profissionais atuais. Se você é apaixonado por tecnologia e deseja explorar o emocionante campo do desenvolvimento web, junte-se a nós!</p>
+                <a href="#" title="Se inscreva para o processo seletivo!">Se inscreva para o processo seletivo!</a>
+            </div>
+            </div>
+            <footer>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.354874533555!2d-48.044870488233826!3d-23.627458878665774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c5cba99a9f4e91%3A0xc97bceb3a2e1cc0d!2sEtec%20Darcy%20Pereira%20de%20Moraes!5e0!3m2!1spt-BR!2sbr!4v1695599118051!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div id="social">
+                    <ul>
+                        <li><a href="#" title="Visite nosso perfil no GitHub"><i class="fa-brands fa-github"></i> GITHUB</a></li>
+                        <li><a href="#" title="Siga-nos no Instagram"><i class="fa-brands fa-instagram"></i> INSTAGRAM</a></li>
+                    </ul>
+                    <p id="credit">Desenvolvido por <span class="cor">2º INFORMÁTICA</span></p>
+                </div>
+            </footer>
+        </div>
+    <script src="assets/js/script.js"></script>
+    </body>
+</html>
