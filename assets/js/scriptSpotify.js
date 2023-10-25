@@ -12,7 +12,7 @@ var countdownfunction = setInterval(function () {
 
     if (distance < 0) {
         clearInterval(countdownfunction);
-        document.getElementById("countdown").innerHTML = "😝 EVENTO EM ANDAMENTO 😝";
+        document.getElementById("countdown").innerHTML = "😝 Procure um monitor para conhecer de perto 😝";
     }
 }, 1000);
 
@@ -36,19 +36,13 @@ function slideAnimation() {
             slide.id = 'c2';
             switch (currentIndex) {
                 case 1:
-                    slideTransf.style.transform = 'translateX(32.5vw)';
-                    break;
-                case 2:
                     slideTransf.style.transform = 'translateX(0vw)';
                     break;
-                case 3:
-                    slideTransf.style.transform = 'translateX(-32.5vw)';
-                    break;
-                case 4:
-                    slideTransf.style.transform = 'translateX(-65vw)';
+                case 2:
+                    slideTransf.style.transform = 'translateX(-34vw)';
                     break;
                 default:
-                    slideTransf.style.transform = 'translateX(65vw)';
+                    slideTransf.style.transform = 'translateX(34vw)';
                     break;
             }
         } else {
@@ -58,38 +52,28 @@ function slideAnimation() {
     });
 }
 
-function ocultarTelaDeCarregamento() {
-    var overlay = document.getElementById("loading");
-    var body = document.getElementById("body");
-    overlay.classList.add("none");
-    body.classList.remove("none");
-}
-/*
+
+
+
 function prevSlide() {
     currentIndex--;
-    if (currentIndex  > 5 ) {
+    if (currentIndex  > slides.length ) {
         currentIndex = 0;
     } else if (currentIndex < 0) {
-        currentIndex = 4
+        currentIndex = 2
     }
     slides.forEach((slide, index) => {
         if (index === currentIndex) {
             slide.id = 'c2';
             switch (currentIndex) {
                 case 1:
-                    slideTransf.style.transform = 'translateX(580px)';
+                    slideTransf.style.transform = 'translateX(0vw)';
                     break;
                 case 2:
-                    slideTransf.style.transform = 'translateX(0px)';
-                    break;
-                case 3:
-                    slideTransf.style.transform = 'translateX(-590px)';
-                    break;
-                case 4:
-                    slideTransf.style.transform = 'translateX(-1180px)';
+                    slideTransf.style.transform = 'translateX(-34vw)';
                     break;
                 default:
-                    slideTransf.style.transform = 'translateX(1180px)';
+                    slideTransf.style.transform = 'translateX(34vw)';
                     break;
             }
             console.log(currentIndex)
@@ -103,7 +87,6 @@ function prevSlide() {
 function nextSlide() {
     slideAnimation()
 }
-
 
 function pauseSlide() {
     const pauseButton = document.getElementById('pauseButton');
@@ -130,69 +113,7 @@ nextButton.addEventListener('click', nextSlide);
 pauseButton.addEventListener('click', pauseSlide);
 
 intervalId = setInterval(slideAnimation, 5000);
-*/
-window.onload = function() {
-    ocultarTelaDeCarregamento();
-};
-
-function ari() {
-    window.location.href = "https://arineto1.github.io/fetec"
-}
-
-function pong() {
-    window.location.href = "../pong.html"
-}
-
-function robo () {
-    window.location.href = "../robotica.html";
-}
-
-function scratch() {
-    window.location.href = "../scratch.html";
-}
-
-function spotify() {
-    window.location.href = "../spotify.html"
-}
 
 function inicio() {
-    window.location.href = "index.html";
+    window.location.href = "../index.html";
 }
-
-
-
-
-
-
-
-
-// Selecione todos os cards dentro da div pai
-const cards = slideTransf.querySelectorAll('.card');
-
-// Função para ajustar o tamanho dos cards com base na posição na div pai
-function adjustCardSize() {
-  const slideRect = slideTransf.getBoundingClientRect();
-  const slideCenter = slideRect.width / 2;
-
-  cards.forEach((card) => {
-    const cardRect = card.getBoundingClientRect();
-    const cardCenter = (cardRect.left + cardRect.right) / 2;
-
-    // Calcule a distância do card ao centro da div pai
-    const distanceToCenter = Math.abs(slideCenter - cardCenter);
-
-    // Calcule um fator de escala com base na distância ao centro
-    // Quanto mais próximo do centro, maior será o fator de escala
-    const scale = 1 + 0.4 * Math.pow(1 - distanceToCenter / (slideRect.width / 2), 3);//Menos abrupta "Math.pow(1 - distanceToCenter / (slideRect.width / 2), 2)"
-
-    // Aplique a escala ao card
-    card.style.transform = `scale(${scale})`;
-  });
-}
-
-// Adicione um evento de rolagem na div pai para chamar a função
-slideTransf.addEventListener('scroll', adjustCardSize);
-
-// Chame a função uma vez para ajustar o tamanho dos cards inicialmente
-adjustCardSize();
-

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infotec - Informática para internet ETEC DPM</title>
+    <link rel="shortcut icon" href="assets/img/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/styleRobotica.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="loading"><img src="assets/img/logo.svg" class="fa-beat" alt="Logotipo de carregamento"></div>
+    <div class="radial" id="1" alt="Elemento radial 1"></div>
+    <div class="radial" alt="Elemento radial 2"></div>
+    <div class="radial" alt="Elemento radial 3"></div>
+    <h2 id="infotec"> INFOTEC</h2>
+    <div class="body">
+        <header id="header">
+            <div id="logo" onclick="inicio()">
+                <img src="assets/img/logo.svg" alt="Logotipo do Infotec">
+                <h1> INFOTEC</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#about" class="cc" alt="Link para a seção Sobre">Sobre</a></li>
+                    <li><a href="index.html#projects" class="cc" alt="Link para a seção Desenvolvedores">Projetos</a></li>
+                    <li><a href="index.html#devD" class="cc" alt="Link para a seção Curso">Curso</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>Robótica</h1>
+            <h2>&lt; M-Tec Informática para Internet / &gt; </h2>
+            <img src="assets/img/robotica.png" alt="Imagem de plano de fundo" class="rotating-image">
+            <h3 id="timestamp">😝 O evento começará em 😝</h3>
+        </main>
+        <div id="about">
+            <p>Este projeto é uma realização conjunta dos alunos do curso M-Tec em Informática para Internet, com a orientação da Profª. Silvia Garcia. O foco principal é a criação de robôs controlados por Arduino. A estética dos robôs foi produzida em sala de aula, utilizando materiais de fácil acesso para incentivar a reprodução do projeto em casa com a família.</p>
+        </div>
+        <div id="dev">
+            <h2>Robôs</h2>
+            <div class="tudo">
+                <iframe src="https://scratch.mit.edu/projects/745861471/embed" allowtransparency="true" width="700" height="700" frameborder="0" scrolling="no" allowfullscreen id="ifr" class=""></iframe>
+
+                <div id="devD">
+                    <h3>Informática para internet</h3>
+                    <h1>Guitar Hero</h1>
+    
+                    <p>O Projeto Makey, é um jogo criado no Scratch baseado no Guitar Hero, foi desenvolvido pelos alunos Caio Henrique e Livia Cardia do 2º ano Informática, na FETEC 2022.</p><br>
+                    <p><b>Controles</b></p>
+                    <p>Pra cima - Vermelho</p>
+                    <p>Pra baixo - Amarelo</p>
+                    <p>Direita - Azul</p>
+                    <p>Esquerda - Verde
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <h1>Desenvolvido por <span>lupe™</span></h1>
+        </footer>
+    </div>
+    <script src="assets/js/scriptScratch.js"></script>
+    <script>
+        let rotatingImage = document.querySelector('.rotating-image');
+
+        window.addEventListener('scroll', function () {
+            let scrolled = window.pageYOffset || document.documentElement.scrollTop;
+            let rotation = Math.min(scrolled * 0.2, 25);
+            let scale = Math.max(1 - (scrolled * 0.0005), 0.75);
+
+            rotatingImage.style.transform = `rotate(${rotation}deg) scale(${scale})`;
+        });
+    </script>
+</body>
+
+</html>

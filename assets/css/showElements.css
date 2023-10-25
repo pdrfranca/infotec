@@ -1,0 +1,11 @@
+
+.hidden {
+    opacity: 0;
+    transition: all 0.1s;
+}
+
+.show {
+    opacity: 1;
+    animation: showElement 1s forwards;
+    transition: all 1.5s;
+}

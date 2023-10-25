@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infotec - Informática para internet ETEC DPM</title>
+    <link rel="shortcut icon" href="assets/img/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/styleSpotify.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="loading"><img src="assets/img/logo.svg" class="fa-beat" alt="Logotipo de carregamento"></div>
+    <div class="radial" id="1" alt="Elemento radial 1"></div>
+    <div class="radial" alt="Elemento radial 2"></div>
+    <div class="radial" alt="Elemento radial 3"></div>
+    <h2 id="infotec"> INFOTEC</h2>
+    <div class="body">
+        <header id="header">
+            <div id="logo" onclick="inicio()">
+                <img src="assets/img/logo.svg" alt="Logotipo do Infotec">
+                <h1> INFOTEC</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#about" class="cc" alt="Link para a seção Sobre">Sobre</a></li>
+                    <li><a href="index.html#projects" class="cc" alt="Link para a seção Desenvolvedores">Projetos</a></li>
+                    <li><a href="index.html#devD" class="cc" alt="Link para a seção Curso">Curso</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>Qual é a música?</h1>
+            <h2>&lt; 2º M-Tec Informática para Internet / &gt; </h2>
+            <img src="assets/img/html.png" alt="Imagem de plano de fundo" class="rotating-image">
+            <h3 id="timestamp">😝 O evento começará em 😝</h3>
+        </main>
+        <div id="about">
+            <p>Este projeto é uma realização conjunta dos alunos do 2º ano do curso M-Tec em Informática para Internet, com a orientação da Profª. Kelly Ribeiro. O foco principal é a criação de um desafio para os jogadores adivinharem o título de uma música a partir de um trecho de áudio.</p>
+        </div>
+        <div id="projects">
+            <h2>Jogos</h2>
+            <div id="slide">
+                <div class="card" id="c2" onclick="window.location.href = 'https://scratch.mit.edu/projects/892894246'">
+                    <img src="assets/img/e1.png" alt="" class="img">
+                    <div class="textCard">
+                        <p class="categoria">Equipe 1 - Turma A</p>
+                        <h3>PAC-MAN</h3>
+                        <p>Arthur, Caio, Gabriel E., Gustavo, Henrique e João Pietro</p>
+                    </div>
+                </div>
+
+                <div class="card" id="c1" onclick="window.location.href = 'https://scratch.mit.edu/projects/903074244'">
+                    <img src="assets/img/e2.png" alt="" class="img">
+                    <div class="textCard">
+                        <p class="categoria">Equipe 2 - Turma A</p>
+                        <h3>SUPER LUFFY BROS</h3>
+                        <p>Agatha, Cauã, Everton, Higor e Julio</p>
+                    </div>
+                </div>
+
+                <div class="card" id="c1" onclick="window.location.href = 'https://scratch.mit.edu/projects/903083248'">
+                    <img src="assets/img/e3.png" alt="" class="img">
+                    <div class="textCard">
+                        <p class="categoria">Equipe 3 - Turma A</p>
+                        <h3>GUITAR HERO</h3>
+                        <p>Giovana, Isabely e Jeniffer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="navigation">
+                <div><i id="prevButton" class="fa-solid fa-caret-left"></i></div>
+                <div><i id="pauseButton" class="fa-sharp fa-solid fa-pause"></i></div>
+                <div><i id="nextButton" class="fa-solid fa-caret-right"></i></div>
+            </div>
+        </div>
+        <footer>
+            <h1>Desenvolvido por <span>lupe™</span></h1>
+        </footer>
+    </div>
+    <script src="assets/js/scriptSpotify.js"></script>
+    <script>
+        let rotatingImage = document.querySelector('.rotating-image');
+
+        window.addEventListener('scroll', function () {
+            let scrolled = window.pageYOffset || document.documentElement.scrollTop;
+            let rotation = Math.min(scrolled * 0.2, 25);
+            let scale = Math.max(1 - (scrolled * 0.0005), 0.75);
+
+            rotatingImage.style.transform = `rotate(${rotation}deg) scale(${scale})`;
+        });
+    </script>
+</body>
+
+</html>
